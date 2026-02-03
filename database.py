@@ -1,7 +1,9 @@
 import sqlite3
 from datetime import datetime
+import os
 
-DB_FILE = "orders.db"
+# Use Railway's writable temp directory for database
+DB_FILE = os.path.join("/tmp", "orders.db")
 
 # Initialize database and table
 def init_db():
