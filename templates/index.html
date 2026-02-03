@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Premium Online Store</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-top">
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="en">🇺🇸 English</option>
+                        <option value="ar">🇸🇦 العربية</option>
+                    </select>
+                </div>
+            </div>
+            <h1 data-i18n="store-title">🛍️ Premium Store</h1>
+            <p data-i18n="store-subtitle">Your trusted online shopping destination</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h2 data-i18n="hero-title">Discover Amazing Products</h2>
+                <p data-i18n="hero-subtitle">Quality products at competitive prices</p>
+            </section>
+
+            <section class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-icon">📱</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="product-smartphone-title">Smartphone Pro</h3>
+                        <p class="product-description" data-i18n="product-smartphone-desc">Latest smartphone with advanced features</p>
+                        <div class="price-section">
+                            <span class="price">$599.99</span>
+                            <span class="original-price">$699.99</span>
+                        </div>
+                        <div class="quantity-section">
+                            <label for="qty-smartphone" data-i18n="quantity-label">Quantity:</label>
+                            <input type="number" id="qty-smartphone" value="1" min="1" max="10">
+                        </div>
+                        <button class="order-button" onclick="placeOrder(getTranslation('product-smartphone-title'), 'qty-smartphone', 599.99)" data-i18n="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-icon">💻</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="product-laptop-title">Laptop Elite</h3>
+                        <p class="product-description" data-i18n="product-laptop-desc">High-performance laptop for professionals</p>
+                        <div class="price-section">
+                            <span class="price">$1299.99</span>
+                            <span class="original-price">$1499.99</span>
+                        </div>
+                        <div class="quantity-section">
+                            <label for="qty-laptop" data-i18n="quantity-label">Quantity:</label>
+                            <input type="number" id="qty-laptop" value="1" min="1" max="10">
+                        </div>
+                        <button class="order-button" onclick="placeOrder(getTranslation('product-laptop-title'), 'qty-laptop', 1299.99)" data-i18n="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-icon">🎧</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="product-headphones-title">Wireless Headphones</h3>
+                        <p class="product-description" data-i18n="product-headphones-desc">Premium sound quality with noise cancellation</p>
+                        <div class="price-section">
+                            <span class="price">$199.99</span>
+                            <span class="original-price">$249.99</span>
+                        </div>
+                        <div class="quantity-section">
+                            <label for="qty-headphones" data-i18n="quantity-label">Quantity:</label>
+                            <input type="number" id="qty-headphones" value="1" min="1" max="10">
+                        </div>
+                        <button class="order-button" onclick="placeOrder(getTranslation('product-headphones-title'), 'qty-headphones', 199.99)" data-i18n="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-icon">⌚</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="product-watch-title">Smart Watch</h3>
+                        <p class="product-description" data-i18n="product-watch-desc">Track your fitness and stay connected</p>
+                        <div class="price-section">
+                            <span class="price">$299.99</span>
+                            <span class="original-price">$349.99</span>
+                        </div>
+                        <div class="quantity-section">
+                            <label for="qty-watch" data-i18n="quantity-label">Quantity:</label>
+                            <input type="number" id="qty-watch" value="1" min="1" max="10">
+                        </div>
+                        <button class="order-button" onclick="placeOrder(getTranslation('product-watch-title'), 'qty-watch', 299.99)" data-i18n="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-icon">📷</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="product-camera-title">Digital Camera</h3>
+                        <p class="product-description" data-i18n="product-camera-desc">Capture life's moments in stunning detail</p>
+                        <div class="price-section">
+                            <span class="price">$799.99</span>
+                            <span class="original-price">$899.99</span>
+                        </div>
+                        <div class="quantity-section">
+                            <label for="qty-camera" data-i18n="quantity-label">Quantity:</label>
+                            <input type="number" id="qty-camera" value="1" min="1" max="10">
+                        </div>
+                        <button class="order-button" onclick="placeOrder(getTranslation('product-camera-title'), 'qty-camera', 799.99)" data-i18n="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-icon">🎮</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="product-console-title">Gaming Console</h3>
+                        <p class="product-description" data-i18n="product-console-desc">Next-gen gaming experience at home</p>
+                        <div class="price-section">
+                            <span class="price">$499.99</span>
+                            <span class="original-price">$599.99</span>
+                        </div>
+                        <div class="quantity-section">
+                            <label for="qty-console" data-i18n="quantity-label">Quantity:</label>
+                            <input type="number" id="qty-console" value="1" min="1" max="10">
+                        </div>
+                        <button class="order-button" onclick="placeOrder(getTranslation('product-console-title'), 'qty-console', 499.99)" data-i18n="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p data-i18n="footer-copyright">&copy; 2024 Premium Store. All rights reserved.</p>
+            <p data-i18n="footer-services">Secure payments • Fast delivery • 24/7 support</p>
+        </div>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
